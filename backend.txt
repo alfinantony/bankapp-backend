@@ -1,0 +1,73 @@
+
+
+                                        BACKEND FOR BANK APPLICATION
+                                     ``````````````````````````````````
+        
+        1: Create package.json file  - npm init
+        2: Install Express  -  npm i express
+        3: Create index.js file - index.js  [ in bank-app backend]
+        4: In index.js file
+
+                //Create server using Express
+
+                // 1: Import express -  const express = require('express');
+
+                //2: Create server using  express - const server =express()
+
+                //3: setup port server app -   server.listen(5000,()=>{
+                                               console.log('sever listing on port 5000');
+                                               })
+
+        5:Install CORS (Cross-Origin Resource Sharing) - npm install cors
+             -> to share the data with different application
+
+ CORS is a node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options.  
+
+        6:Use cors in server app
+        7:API CALL / API request
+          //register
+          //login
+             
+          Frontend -> request ->Internet -> http method -> API -> BACKEND
+
+        8: To parse json  data to js in server app - use express.json()
+
+        9: To resolve client request in server
+
+            server_app_name.http_method('path',callback function)
+
+            callback function is used define logic to resolve client request and send response
+
+        10: Data Base connection with Node
+             1} Node connect with mongodb  - npm i mongoose    
+             2} Create a service folder in server in BACKEND , Create a db.js file
+             3} Import mongoose and define connection straighten
+             4} Create a model and schema for storing data in the database
+             5} Exports the collection
+             6} logic to resolve - create a file logic.js in services folder
+             7} In index.js -  To resolve client request in server
+             8} Test client request in postman
+
+        11: Authorization using Jsonwebtoken (JWT Token)
+               
+                1} Install jsonwebtoken -> npm i jsonwebtoken
+                2} Generate token -> using sign()
+                      Using JWT token, generate token for user who loggined successful
+                      logic : logic successful? + sign() method generate token
+               3} Import jsonwebtoken in logic.js    
+               4} Generate token for user who loggined successful in logic.js
+               5} set token in fronted
+               6} verify token -> when client request after successful in login
+                            getBalance + add token to the header
+
+                            getBalance request ->    
+                                                      1} header - token
+                                                      2} body - acno
+               7} middleware
+               -> Control request-response cycle
+               -> function(req,res,next)
+                Type of middleware
+                        1} application specific middleware
+                        2} Router specific middleware
+ 
+        

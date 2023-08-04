@@ -4,7 +4,7 @@
   "description": "Backend for Bank App",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "keywords": [
     "NodeJs",
@@ -13,6 +13,7 @@
   ],
   "author": "Alfin Antony",
   "license": "ISC",
+  "engines": {"node": ">=14.20.1"},
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
